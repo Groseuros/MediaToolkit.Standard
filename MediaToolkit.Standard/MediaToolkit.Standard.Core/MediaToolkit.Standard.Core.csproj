@@ -2,7 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
+    <PackageLicenseFile></PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>groseuros</Authors>
+    <Company />
+    <PackageProjectUrl>https://github.com/Groseuros/MediaToolkit.Standard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Groseuros/MediaToolkit.Standard</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Description>Core nuget needed by MediaToolkit.Standard nuget
+
+.Net Standard port and extension of the well known MediaToolkit from @AydinAdn.
+
+Based on MediaToolkit.NetCore from @mtebenev.</Description>
+    <PackageTags>ffmpeg, wrapper, .net standard, c#, audio, video, mediatoolkit</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
