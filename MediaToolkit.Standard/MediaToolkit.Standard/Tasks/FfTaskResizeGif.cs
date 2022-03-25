@@ -15,8 +15,9 @@ namespace MediaToolkit.Standard.Tasks
         private readonly int targetFPS;
         private readonly int targetQuality;
         private readonly int lossless;
+        private readonly int loop;
 
-        public FfTaskResizeGif(string inputFilePath, string outputFilePath, int targetWidth, int targetFPS = 30, int targetQuality = 75, int lossless = 0)
+        public FfTaskResizeGif(string inputFilePath, string outputFilePath, int targetWidth, int targetFPS = 30, int targetQuality = 75, int lossless = 0, int loop = 0)
         {
             this.inputFilePath = inputFilePath;
             this.outputFilePath = outputFilePath;
@@ -24,6 +25,7 @@ namespace MediaToolkit.Standard.Tasks
             this.targetFPS = targetFPS;
             this.targetQuality = targetQuality;
             this.lossless = lossless;
+            this.loop = loop;
         }
 
         public override IList<string> CreateArguments()
@@ -36,6 +38,8 @@ namespace MediaToolkit.Standard.Tasks
                 $@"{inputFilePath}",
                 "-lossless",
                 $@"{lossless}",
+                "-loop",
+                $@"{loop}",
                 "-qscale",
                 $@"{targetQuality}",
                 "-filter_complex",
